@@ -55,3 +55,4 @@ The data that will be stored is information related to case files. These case fi
 |94637224/2      | 1            | 2                     | 2471     |
 
 ## 1.5 Preliminary ERD for Database
+![Preliminary ERD](project_docs/Images/ERD.png)
