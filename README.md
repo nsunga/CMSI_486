@@ -3,5 +3,5 @@ Database Class
 
 #### Team Members
     - Rony Aguilar
-    - Nick Nsunga
+    - Nick Sunga
     - Alex Verdin

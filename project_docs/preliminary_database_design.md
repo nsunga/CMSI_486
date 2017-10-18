@@ -19,9 +19,9 @@ The data that will be stored is information related to case files. These case fi
 ## 1.4 Preliminary Schema
 #### Case
 
-|Court Case # | Coroner Case #| Dr# (PK)| Notes          | Detail Key (FK)| Police Key (FK)|VictimID
-|-------------|---------------|---------|----------------|----------------|----------------|-------|
-| 31231231    | 24795739      | 2412    |  Example Note  | 0000000001     | 0000000001     |0000024123
+|Dr# (PK)|Court Case #| Coroner Case #| Notes          | Detail Key (FK)| Police Key (FK)|VictimID (FK)|
+|--------|------------|---------------|----------------|----------------|----------------|-------------|
+|2412    | 31231231   | 24795739      |  Example Note  | 0000000001     | 0000000001     |0000024123   |
 
 #### Victim
 
@@ -31,8 +31,8 @@ The data that will be stored is information related to case files. These case fi
 
 #### Suspect
 
-|SuspectID(PK)|Name        |          Motive    |
-|-------------|------------|------------------- |
+|SuspectID(PK)|Name        |Motive              |
+|-------------|------------|--------------------|
 |39571245     |Nick        | Robbery            |
 
 #### Police
