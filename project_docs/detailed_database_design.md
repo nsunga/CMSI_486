@@ -15,7 +15,7 @@
   - crime_type: Charge of the crime (Homicide, Robbery, Assault etc.)
   
 + Suspect
-  - suspect_id: Suspect entity identifier
+  - suspect_id: Suspect entity identifier (Primary Key)
   - firstname: First name of suspect
   - lastname: Last name of suspect
   - ethnicity: Ethnicity of suspect
@@ -23,7 +23,7 @@
   - sex: Sex or gender of suspect
   
 + Victim
-  - victim_id: Victim entity identifier
+  - victim_id: Victim entity identifier (Primary Key)
   - firstname: First name of victim
   - lastname: Last name of victim
   - ethnicity: Ethnicity of victim
