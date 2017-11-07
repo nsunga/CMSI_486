@@ -4,3 +4,4 @@
 ## 2.2 Data Description
 
 ## 2.3 Entity Relationship Diagram
+![Detailed Database Design ERD](./Images/ERD_DDD.png)
