@@ -1,0 +1,21 @@
+
+
+Rony and Alex and Nick ---
+
+Good detail on this document.  Shows things at the appropriate
+level for a preliminary design.
+
+The ERD is very nice.  Is names a multivalued attribute?  Or is that
+intended to be a composite attribute?
+
+If you decide to stick with Neo, you might revise the ERD, so heads-up.
+
+The example section should really contain 5 specific examples of what you
+put for example number 3 in your document.  I'm looking for what the USER
+will want to get out of the database *based on their search criteria*.
+
+For example, "how many homicides involved multiple victims in 1984 - 1999?"
+or "How may homicides were committed with baseball bats?"
+
+Total: 9.5% out of 10% which is an A.
+
