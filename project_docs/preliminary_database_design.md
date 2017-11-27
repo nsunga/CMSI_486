@@ -6,15 +6,25 @@ For our database design, we will be using Neo4j: a native graph database that is
 The data that will be stored is information related to case files. These case files are supplied by the LAPD and pertain to their murder case books. Specifically, the types of data will be strings. These strings encompass information such as: victim names, suspect names, weapons, dates, and other relevant LAPD murder case information.
 
 ## 1.3 Examples
-##### 1. A default table that displays all case entries
+##### 1. RETURN ALL CASES AND THEIR GRAPHS
+MATCH (n)-[r]->m RETURN n, r, m
 
-##### 2. A detailed case information page that displays all attributes for a specific entry
+##### 2. RETURN ALL SUSPECTS
+MATCH (n:Person)-[r:COMMITTED_A]->(m) RETURN n, r, m
 
-##### 3. A filtered table that displays cases entries that match the user's search input
+##### 3. RETURN CASES WITH A SPECIFIC ATTRIBUTE (first name as an example)
+MATCH (c:Case)<-[r:INVOLVED_IN]-(p:Person{first_name:"Alex"}) RETURN c, r, p
 
-##### 4. All cases entries are editable and database will only accept valid inputs
+##### 4. EDITING AN ATTRIBUTE AND RETURNING THAT NODE
+MATCH(n:Person) WHERE n.last_name = "Test2" SET n.last_name = "Kevin"
+return n
 
-##### 5. Case entries include case information such MasterDr#, Dr#, Victim Names, Location etc.
+##### 5. CREATE ONE NODE
+CREATE (c:Crime{case_id:'10',crime_type:'Murder',crime_id:'9'})
+
+##### 6. UPDATING A CASE ENTRY WITH A NEW SUSPECT, AND RETURNING THAT CASE'S GRAPH
+MATCH (c:Case)<-[]-(m) WHERE c.case_id='2' CREATE
+  (p:Person{first_name:"Daniel",last_name:"Sjarif",age:"7",sex",ethnicity:"Asian"})-[r:COMMITTED_A]->(c) RETURN r,c,m
 
 ## 1.4 Preliminary Schema
 #### Case

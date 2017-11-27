@@ -1,0 +1,19 @@
+ALL CASES
+MATCH (n)-[r]->m RETURN n, r, m
+
+ALL SUSPECTS
+MATCH (n:Person)-[r:COMMITTED_A]->(m) RETURN n, r, m
+
+RETURN CASES WITH A SPECIFIC ATTRIBUTE (first name as an example)
+MATCH (c:Case)<-[r:INVOLVED_IN]-(p:Person{first_name:"Alex"}) RETURN c, r, p
+
+EDITING AN ATTRIBUTE AND RETURNING THAT NODE
+MATCH(n:Person) WHERE n.last_name = "Test2" SET n.last_name = "Kevin"
+return n
+
+CREATE ONE NODE
+CREATE (c:Crime{case_id:'10',crime_type:'Murder',crime_id:'9'})
+
+UPDATING A CASE ENTRY WITH A NEW SUSPECT, AND RETURNING THAT CASE'S GRAPH
+MATCH (c:Case)<-[]-(m) WHERE c.case_id='2' CREATE
+  (p:Person{first_name:"Daniel",last_name:"Sjarif",age:"7",sex",ethnicity:"Asian"})-[r:COMMITTED_A]->(c) RETURN r,c,m
