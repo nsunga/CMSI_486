@@ -1,4 +1,8 @@
-first_name,last_name,age,sex,ethnicity
-Rony,Aguilar,
-Nick,Nsunga,
-Alex,Verdin,
+first_name,last_name,age,sex,ethnicity,suspect,case_id,crime_id,
+Rony,Aguilar,22,M,Hispanic,Y,1,1,
+Nick,Nsunga,21,F,Asian,N,1,1,
+Alex,Verdin,21,F,Hispanic,N,2,2,
+Ray,Toal,25,M,White,N,3,3,
+John,Dionisio,23,M,Asian,Y,3,3,
+BJ,Johnson,10,M,White,N,3,3,
+Test1,Test2,5,F,Native-American,Y,4,4,
